@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.itwill.inner03.Button.onClickListener&apos; to &apos;OnClickListener&apos;&#x0D;&#x0A;- Original project: &apos;lab13_inner&apos;&#x0D;&#x0A;- Original element: &apos;com.itwill.inner03.Button.onClickListener&apos;&#x0D;&#x0A;- Renamed element: &apos;com.itwill.inner03.Button.OnClickListener&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;onClickListener&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.itwill.inner03{Button.java[Button[onClickListener" matchStrategy="1" name="OnClickListener" qualified="false" references="true" similarDeclarations="false" stamp="1697097064655" textual="false" version="1.0"/>
+</session>

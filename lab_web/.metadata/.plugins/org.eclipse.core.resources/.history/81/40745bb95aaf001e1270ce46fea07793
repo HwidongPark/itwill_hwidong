@@ -1,0 +1,17 @@
+package com.itwill.springboot1.domain;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "POSTS")
+public class Post {
+    
+    private Long id;
+    
+    private String title;
+    
+    private String text;
+}

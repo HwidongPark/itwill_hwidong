@@ -1,0 +1,50 @@
+package com.itwill.springboot2.domain;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "EMP")
+public class Employee {
+    
+    @Id
+    @Column(name = "EMPNO")
+    private Integer id;
+    
+    private String ename;
+    
+    private String job;
+    
+    @Column(name = "MGR")
+    private Integer manager;
+    
+//    @Column(name="MGR")
+//    @OneToOne
+//    @JoinColumn(name = "empno")
+//    private Employee manager;
+    
+    private LocalDateTime hiredate;
+    
+    @Column(name = "SAL")
+    private Double salary;
+    
+    @Column(name = "COMM")
+    private Double commission;
+    
+//    private Integer deptno;
+    
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "deptno")
+    private Department dept;
+    
+}

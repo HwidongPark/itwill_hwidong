@@ -1,0 +1,9 @@
+Canpackage com.itwill.springboot1.domain;
+
+public class Post {
+    
+    private Long id;
+    
+    private String title;
+    
+}

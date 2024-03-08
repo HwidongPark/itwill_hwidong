@@ -1,0 +1,41 @@
+package com.itwill.springboot2.repository;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Example;
+
+import com.itwill.springboot2.domain.Employee2;
+import com.itwill.springboot2.domain.Employee2Repository;
+
+import lombok.extern.slf4j.Slf4j;
+
+@SpringBootTest
+@Slf4j
+public class JpaExampleTest {
+    
+    
+    @Autowired private Employee2Repository empDao;
+    
+    @Test
+    public void test() {
+        
+        // lastName이 King인 직원(들)의 정보 검색
+        Employee2 emp = new Employee2();
+        emp.setLastName("King");
+        
+        Example<Employee2> example = Example.of(emp);
+        
+        List<Employee2> list = empDao.findAll(example);
+        list.forEach((e) -> log.into(e.toString()));
+        
+        
+        
+        
+        
+    }
+    
+    
+}

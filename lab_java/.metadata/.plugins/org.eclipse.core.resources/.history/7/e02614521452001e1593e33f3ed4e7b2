@@ -1,0 +1,29 @@
+package com.itwill.array04;
+
+public class ArrayMain04 {
+    
+    public static void main(String[] args) {
+        
+        int max = 0;
+        int[] array = {1, 5, 3, 8, 2};
+        int min = array[0];
+        
+        for (int num : array) {
+            if (num >= max) {
+                max = num;
+                
+            }
+            
+            if (num <= min) {
+                min = num;
+            }
+            
+        }
+        
+        
+        System.out.println("max: " + max);
+        System.out.println("min: " + min);
+        
+    }
+    
+}

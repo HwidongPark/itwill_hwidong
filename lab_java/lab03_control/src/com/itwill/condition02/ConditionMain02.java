@@ -1,0 +1,20 @@
+package com.itwill.condition02;
+
+public class ConditionMain02 {
+
+    public static void main(String[] args) {
+        // 중첩 조건 문: if 또는 else 등의 code block안에 도 다른 조건문이 있는 경우.
+        double x = -3.14;
+        if (x > 0 ) {
+            System.out.println("양수");
+        } else {
+            if (x < 0) {
+                System.out.println("음수");
+            } else {
+                System.out.println("Zero");
+            }
+        }
+        
+    }
+
+}

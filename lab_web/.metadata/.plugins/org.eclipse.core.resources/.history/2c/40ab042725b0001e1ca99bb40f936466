@@ -1,0 +1,17 @@
+package com.itwill.springboot2.domain;
+
+import java.time.LocalDateTime;
+
+public class Employee2 {
+    private Integer employeeId;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String phoneNumber;
+    private LocalDateTime hireDate;
+    private String jobId;
+    private Double salary;
+    private Double commisionPct;
+    private Integer managerId;
+    private Integer DepartmentId;
+}

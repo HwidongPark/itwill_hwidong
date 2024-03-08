@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- Posts 테이블에서 CRUD에 필요한 SQL 문장들을 선언 -->
+<mapper namespace="com.itwill.spring2.repository.PostDao">
+
+    <!-- Posts 테이블 전체 검색, 아이디 내림차순 정렬 -->
+    <select id="selectOrderByIdDesc" resultType="Post">
+        SELECT * FROM
+        posts ORDER BY id DESC
+    </select>
+    <!-- Posts테이블에서 아이디(PK)로 검색 -->
+    <select id="selectById" resultType="Post">
+        SELECT * FROM posts WHERE
+        id = #{id}
+    </select>
+
+    <!-- Posts테이블에서 category, keyword로 검색 -->
+    <select id="selectByKeyword"  resultType="Post">
+        <bind name="searchKeyword" value="'%' + keyword + '%'" />
+        SELECT * FROM posts
+        <where>
+            <choose>
+                <when test='category.equals("title")'>
+                    <!-- title 열에서 keyword가 포함된 행 찾기 -->
+                    LOWER(title) LIKE LOWER(#{searchKeyword})
+                </when>
+                <when test='category.equals("content")'>
+                    <!-- content 열에서 keyword가 포함된 행 찾기 -->
+                    AND LOWER(content) LIKE LOWER(#{searchKeyword})
+                </when>
+                <when test='category.equals("author")'>
+                    AND LOWER(author) LIKE LOWER(#{searchKeyword})
+                </when>
+                <when test='category.equals("title_content")'>
+                    AND (LOWER(title) LIKE LOWER(#{searchKeyword})
+                        OR
+                    LOWER(content) LIKE LOWER(#{searchKeyword}))
+                </when>
+            </choose>
+        </where>
+    </select>
+
+    <!-- Posts 테이블에 새 포스트 삽입 -->
+    <insert id="insert">
+        INSERT INTO posts (title, content, author) VALUES
+        (#{title}, #{content}, #{author})
+    </insert>
+
+    <!-- Posts 테이블 업데이트 -->
+    <update id="update">
+        UPDATE posts
+        SET title = #{title}, content =
+        #{content}, modified_time = systimestamp
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM posts WHERE id = #{id}
+    </delete>
+
+</mapper>

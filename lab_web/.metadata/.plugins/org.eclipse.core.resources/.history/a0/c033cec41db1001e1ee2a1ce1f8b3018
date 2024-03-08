@@ -1,0 +1,29 @@
+package com.itwill.springboot2.repository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.itwill.springboot2.domain.Employee2Repository;
+
+import lombok.extern.slf4j.Slf4j;
+
+@SpringBootTest
+@Slf4j
+public class JpaExampleTest {
+    
+    
+    @Autowired private Employee2Repository empDao;
+    
+    @Test
+    public void test() {
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+}

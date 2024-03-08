@@ -1,0 +1,8 @@
+package com.itwill.springboot2.domain;
+
+public class Department2 {
+    private Integer departmentId;
+    private String departmentName;
+    private Integer managerId;
+    private Integer locationId;
+}

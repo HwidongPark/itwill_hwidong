@@ -1,0 +1,10 @@
+package com.itwill.springboot1.domain;
+
+
+public class Author {
+    
+    private Long id;
+    
+    private String name;
+    
+}

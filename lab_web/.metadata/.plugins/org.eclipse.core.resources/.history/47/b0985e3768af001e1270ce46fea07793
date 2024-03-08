@@ -1,0 +1,10 @@
+package com.itwill.springboot2.domain;
+
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class EmployeeRepositoryTest {
+    
+    
+    
+}

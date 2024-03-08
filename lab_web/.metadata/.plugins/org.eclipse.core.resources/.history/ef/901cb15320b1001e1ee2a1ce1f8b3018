@@ -1,0 +1,49 @@
+package com.itwill.springboot2.repository;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Example;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.itwill.springboot2.domain.Employee2;
+import com.itwill.springboot2.domain.Employee2Repository;
+
+import lombok.extern.slf4j.Slf4j;
+
+@SpringBootTest
+@Slf4j
+@Transactional
+public class JpaExampleTest {
+    
+    
+    @Autowired private Employee2Repository empDao;
+    
+    @Test
+    public void test() {
+        
+        // lastName이 King인 직원(들)의 정보 검색
+        // Example타입에 검색하고싶은 정보들만 넣어주면 됨
+        // Example은 where조건을 검색하기 위해 필요한 정보를 가지고 있는 예제를 넣어주는 것임
+        
+//        Employee2 emp = new Employee2();
+//        emp.setLastName("King");
+//        
+//        Example<Employee2> example = Example.of(emp);
+        
+        Employee2 emp = new Employee2();
+        emp.getDepartment().setDepartmentName("IT");;
+        
+        List<Employee2> list = empDao.findAll(example);
+        list.forEach((e) -> log.info(e.toString()));
+        
+        
+        
+        
+        
+    }
+    
+    
+}

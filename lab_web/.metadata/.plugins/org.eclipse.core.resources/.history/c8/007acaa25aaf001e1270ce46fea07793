@@ -1,0 +1,15 @@
+package com.itwill.springboot1.domain;
+
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Entity
+@Data
+public class Post {
+    
+    private Long id;
+    
+    private String title;
+    
+    private String text;
+}

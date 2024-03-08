@@ -1,0 +1,134 @@
+package com.itwill.polyglot.view;
+
+
+import java.awt.Color;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+import javax.swing.JTextField;
+import javax.swing.JRadioButton;
+import javax.swing.JButton;
+
+public class FindPasswordFrame extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private JPanel contentPane;
+    private JLabel lblTitle;
+    private JTextField textField;
+    private JRadioButton rdbtnPhone;
+    private JRadioButton rdbtnEmail;
+    private JTextField textField_1;
+    private JLabel lblOptionChosen;
+    private JLabel lblNewLabel;
+    private JButton btnFindPassword;
+
+    /**
+     * Launch the application.
+     */
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    FindPasswordFrame frame = new FindPasswordFrame();
+                    frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    /**
+     * Create the frame.
+     */
+    public FindPasswordFrame() {
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setBackground(Color.WHITE);
+        setResizable(false);
+        setBounds(100, 100, 426, 395);
+        contentPane = new JPanel();
+        contentPane.setBackground(new Color(255, 255, 255));
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+        setContentPane(contentPane);
+        contentPane.setLayout(null);
+        
+        lblTitle = new JLabel("비밀번호 찾기");
+        lblTitle.setFont(new Font("D2Coding", Font.BOLD, 20));
+        lblTitle.setBounds(124, 10, 156, 44);
+        contentPane.add(lblTitle);
+        
+        JLabel lblAccount = new JLabel("아이디:");
+        lblAccount.setFont(new Font("D2Coding", Font.BOLD, 15));
+        lblAccount.setBounds(27, 98, 71, 27);
+        contentPane.add(lblAccount);
+        
+        textField = new JTextField();
+        textField.setBounds(110, 93, 242, 34);
+        contentPane.add(textField);
+        textField.setColumns(10);
+        
+        // 전화번호/이메일 선택여부에 따라 달라지는 label
+        lblOptionChosen = new JLabel("전화번호");
+        lblOptionChosen.setFont(new Font("D2Coding", Font.BOLD, 15));
+        lblOptionChosen.setBounds(27, 191, 71, 27);
+        contentPane.add(lblOptionChosen);
+        
+        rdbtnPhone = new JRadioButton("전화번호");
+        rdbtnPhone.setSelected(true);
+        rdbtnPhone.addMouseListener(new MouseAdapter() {    // 핸드폰번호 rdbtn 마우스리스너 추가
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                lblOptionChosen.setText("전화번호");
+            }    
+            
+            
+        });
+        
+        rdbtnPhone.setBackground(new Color(255, 255, 255));
+        rdbtnPhone.setFont(new Font("D2Coding", Font.PLAIN, 10));
+        rdbtnPhone.setBounds(194, 147, 90, 23);
+        contentPane.add(rdbtnPhone);
+        
+        rdbtnEmail = new JRadioButton("이메일");
+        rdbtnEmail.addMouseListener(new MouseAdapter() {    // 이메일 rdbtn 마우스리스너 추가
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                lblOptionChosen.setText("이메일");
+            }
+            
+            
+            
+        });
+        rdbtnEmail.setFont(new Font("D2Coding", Font.PLAIN, 10));
+        rdbtnEmail.setBackground(Color.WHITE);
+        rdbtnEmail.setBounds(288, 147, 64, 23);
+        contentPane.add(rdbtnEmail);
+        
+        lblNewLabel = new JLabel("비밀번호 찾기 옵션:");
+        lblNewLabel.setFont(new Font("D2Coding", Font.ITALIC, 12));
+        lblNewLabel.setBounds(55, 150, 128, 15);
+        contentPane.add(lblNewLabel);
+        
+        textField_1 = new JTextField();
+        textField_1.setColumns(10);
+        textField_1.setBounds(110, 184, 242, 34);
+        contentPane.add(textField_1);
+        
+        
+        // 비밀번호 찾는 버튼
+        btnFindPassword = new JButton("비밀번호 찾기");
+        btnFindPassword.setBackground(new Color(255, 255, 255));
+        btnFindPassword.setBounds(139, 266, 115, 44);
+        contentPane.add(btnFindPassword);
+    }
+}

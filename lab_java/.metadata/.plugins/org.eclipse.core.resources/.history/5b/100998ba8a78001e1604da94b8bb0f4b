@@ -1,0 +1,66 @@
+package com.itwill.polyglot.view;
+
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+
+public class FindPasswordFrame extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private JPanel contentPane;
+    private JLabel lblTitle;
+    private JTextField textField;
+
+    /**
+     * Launch the application.
+     */
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    FindPasswordFrame frame = new FindPasswordFrame();
+                    frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    /**
+     * Create the frame.
+     */
+    public FindPasswordFrame() {
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        
+        
+        setBounds(100, 100, 450, 500);
+        contentPane = new JPanel();
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+        setContentPane(contentPane);
+        contentPane.setLayout(null);
+        
+        lblTitle = new JLabel("비밀번호 찾기");
+        lblTitle.setFont(new Font("D2Coding", Font.BOLD, 20));
+        lblTitle.setBounds(142, 10, 156, 44);
+        contentPane.add(lblTitle);
+        
+        JLabel lblAccount = new JLabel("아이디:");
+        lblAccount.setFont(new Font("굴림", Font.BOLD, 15));
+        lblAccount.setBounds(45, 98, 71, 27);
+        contentPane.add(lblAccount);
+        
+        textField = new JTextField();
+        textField.setBounds(128, 93, 214, 34);
+        contentPane.add(textField);
+        textField.setColumns(10);
+    }
+
+}

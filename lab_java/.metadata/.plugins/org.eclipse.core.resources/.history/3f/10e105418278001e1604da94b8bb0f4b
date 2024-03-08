@@ -1,0 +1,108 @@
+package com.itwill.polyglot.view;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JRadioButton;
+import javax.swing.JButton;
+import javax.swing.UIManager;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.ButtonGroup;
+
+public class FindAccountFrame extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private JPanel contentPane;
+    private JTextField textField;
+    private JButton btnFindAccount;
+    private final ButtonGroup buttonGroup = new ButtonGroup();
+
+    /**
+     * Launch the application.
+     */
+    public static void showFindAccountFrame() {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    FindAccountFrame frame = new FindAccountFrame();
+                    frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+    
+    public FindAccountFrame() {
+        initialize();
+    };
+    
+    /**
+     * Create the frame.
+     */
+    public void initialize() {
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setResizable(false);
+        setBounds(100, 100, 389, 402);
+        contentPane = new JPanel();
+        contentPane.setBackground(Color.WHITE);
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+        setContentPane(contentPane);
+        contentPane.setLayout(null);
+        
+        JLabel lblTitle = new JLabel("아이디 찾기");
+        lblTitle.setFont(new Font("D2Coding", Font.BOLD, 20));
+        lblTitle.setBounds(128, 10, 129, 44);
+        contentPane.add(lblTitle);
+        
+        JTextArea textArea = new JTextArea();
+        textArea.setFont(new Font("D2Coding", Font.ITALIC, 14));
+        textArea.setEditable(false);
+        textArea.setBackground(Color.WHITE);
+        textArea.setText("전화번호, 이메일 중 하나를 선택한 후,\r\n\t   입력해 주세요");
+        textArea.setBounds(54, 64, 284, 54);
+        contentPane.add(textArea);
+        
+        JRadioButton rdbtnPhone = new JRadioButton("전화번호");
+        buttonGroup.add(rdbtnPhone);
+        rdbtnPhone.setBackground(new Color(255, 255, 255));
+        rdbtnPhone.setBounds(54, 113, 95, 23);
+        contentPane.add(rdbtnPhone);
+        
+        JRadioButton rdbtnEmail = new JRadioButton("이메일");
+        buttonGroup.add(rdbtnEmail);
+        rdbtnEmail.setBackground(Color.WHITE);
+        rdbtnEmail.setBounds(225, 113, 95, 23);
+        contentPane.add(rdbtnEmail);
+        
+        textField = new JTextField();
+        textField.setFont(new Font("D2Coding", Font.PLAIN, 14));
+        textField.setBounds(54, 179, 266, 36);
+        contentPane.add(textField);
+        textField.setColumns(10);
+        
+        JLabel lblInput = new JLabel("입력:");
+        lblInput.setFont(new Font("D2Coding", Font.ITALIC, 12));
+        lblInput.setBounds(54, 162, 95, 15);
+        contentPane.add(lblInput);
+        
+        btnFindAccount = new JButton("아이디 찾기");
+        btnFindAccount.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            }
+        });
+        btnFindAccount.setBackground(UIManager.getColor("CheckBox.background"));
+        btnFindAccount.setFont(new Font("D2Coding", Font.PLAIN, 14));
+        btnFindAccount.setBounds(105, 251, 168, 54);
+        contentPane.add(btnFindAccount);
+    }
+}

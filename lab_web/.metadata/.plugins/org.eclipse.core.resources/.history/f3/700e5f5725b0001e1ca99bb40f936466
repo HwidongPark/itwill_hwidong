@@ -1,0 +1,13 @@
+package com.itwill.springboot2.domain;
+
+import jakarta.persistence.OneToMany;
+
+public class Department2 {
+    private Integer departmentId;
+    private String departmentName;
+    private Integer managerId;
+    private Integer locationId;
+    
+    @OneToMany(mappedBy = "department")
+    private List<Employee2> employees;
+}

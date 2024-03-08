@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.itwill.datetime.DatetimeEx.java&apos; to &apos;DateTimeEx.java&apos;&#x0D;&#x0A;- Original project: &apos;lab10_api&apos;&#x0D;&#x0A;- Original element: &apos;com.itwill.datetime.DatetimeEx.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.itwill.datetime.DateTimeEx.java&apos;" description="Rename compilation unit &apos;DatetimeEx.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.itwill.datetime{DatetimeEx.java" name="DateTimeEx.java" references="false" stamp="1696472604997" version="1.0"/>
+</session>

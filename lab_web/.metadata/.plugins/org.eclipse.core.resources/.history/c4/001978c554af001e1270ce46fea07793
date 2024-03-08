@@ -1,0 +1,5 @@
+package com.itwill.springboot1.domain;
+
+public class Question2 {
+
+}

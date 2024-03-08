@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itwill.spring2.repository.CommentDao">
+    
+    <!-- 특정 포스트에 달려있는 모든 댓글을 검색(아이디 내림차순). -->
+    <select id="selectByPostId" resultType="Comment">
+        SELECT * FROM comments
+        WHERE postid = #{postid}
+        ORDER BY id DESC
+    </select>
+    
+    <!-- 특정 포스트에 새 댓글을 추가. -->
+    <insert id="insert">
+        INSERT INTO comments (postid, writer, ctext) VALUES (#{postid}, #{writer}, #{ctext})
+    </insert>
+    
+    <!-- 댓글 삭제 1: PK(id)로 찾아서 1개의 댓글을 삭제 -->
+    <delete id="deleteById">
+        DELETE FROM comments WHERE id = #{id}
+    </delete>
+    
+    <!-- 댓글 삭제 2: 특정 포스트에 달려 있는 모든 댓글 삭제 -->
+    <delete id="deleteByPostId">
+        DELETE FROM comments WHERE postid = #{postid}
+    </delete>
+    
+    
+    <!-- 댓글 수정 -->
+    <update id="update">
+        UPDATE comments 
+            SET ctext=#{ctext}, modified_time = systimestamp 
+        WHERE id=#{id}
+    </update>
+    
+    <!-- 특정 포스트에 달려 있는 댓글 개수를 검색 -->
+    <select id="selectCommentCounts" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM comments 
+        GROUP BY postid
+        HAVING postid = #{postid}
+    </select>
+    
+    <!-- 댓글 아이디(PK)로 검색하기 -->
+    <select id="selectById" resultType="Comment">
+        SELECT * FROM comments WHERE id = #{id}
+    </select>
+    
+
+    
+    
+</mapper>

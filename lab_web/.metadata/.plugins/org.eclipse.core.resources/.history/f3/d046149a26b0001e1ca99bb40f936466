@@ -1,0 +1,27 @@
+package com.itwill.springboot2.domain;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import lombok.ToString;
+
+public class Employee2 {
+    @Id
+    private Integer employeeId;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String phoneNumber;
+    private LocalDateTime hireDate;
+    private String jobId;
+    private Double salary;
+    private Double commisionPct;
+    private Integer managerId;
+    
+    @ManyToOne
+    @ToString.Exclude
+    @JoinColumn(name = "department_id")
+    private Department2 department;
+}

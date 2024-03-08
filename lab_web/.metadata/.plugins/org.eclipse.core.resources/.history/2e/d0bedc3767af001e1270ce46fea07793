@@ -1,0 +1,5 @@
+package com.itwill.springboot2.domain;
+
+public interface EmployeeRepository {
+    
+}

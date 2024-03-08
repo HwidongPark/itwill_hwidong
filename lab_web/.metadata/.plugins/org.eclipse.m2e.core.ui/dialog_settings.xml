@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="com.fourmen"/>
+			<item value="com.itwill.spring2"/>
+			<item value="com.itwill"/>
+			<item value="testgroup"/>
+		</list>
+		<list key="name">
+			<item value="Spring2"/>
+			<item value="Spring1"/>
+			<item value="JSP"/>
+		</list>
+		<list key="artifactId">
+			<item value="fourmen"/>
+			<item value="spring2"/>
+			<item value="practice_jsp"/>
+			<item value="spring1"/>
+			<item value="jsp2"/>
+			<item value="testid"/>
+			<item value="jsp1"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

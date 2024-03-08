@@ -1,0 +1,153 @@
+package com.itwill.polyglot.view;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import com.itwill.polyglot.controller.PolyglotDao;
+
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JPasswordField;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+
+public class SignInFrame extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private JPanel contentPane;
+    private JLabel lblAccount;
+    private JLabel lblPassword;
+    private JTextField textAccount;
+    private JLabel lblEmail;
+    private JTextField textPhone;
+    private JTextField textField_2;
+    private JButton btnCancel;
+    private JPasswordField passwordField;
+    private JLabel lblPhoneWarning;
+    
+    private PolyglotDao dao = PolyglotDao.getInstance();
+
+    /**
+     * Launch the application.
+     */
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    SignInFrame frame = new SignInFrame();
+                    frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    /**
+     * Create the frame.
+     */
+    public SignInFrame() {
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setFont(new Font("D2Coding", Font.PLAIN, 12));
+        setBounds(100, 100, 400, 470);
+        contentPane = new JPanel();
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+        setContentPane(contentPane);
+        contentPane.setLayout(null);
+        
+        JLabel lblSignInTitle = new JLabel("회원가입");
+        lblSignInTitle.setFont(new Font("D2Coding", Font.BOLD, 18));
+        lblSignInTitle.setBounds(41, 24, 97, 27);
+        contentPane.add(lblSignInTitle);
+        
+        lblAccount = new JLabel("*아이디:");
+        lblAccount.setFont(new Font("D2Coding", Font.BOLD, 15));
+        lblAccount.setBounds(41, 74, 79, 32);
+        contentPane.add(lblAccount);
+        
+        lblPassword = new JLabel("*비밀번호:");
+        lblPassword.setFont(new Font("D2Coding", Font.BOLD, 15));
+        lblPassword.setBounds(41, 133, 79, 32);
+        contentPane.add(lblPassword);
+        
+        JLabel lblPhone = new JLabel("전화 번호:");
+        lblPhone.setFont(new Font("D2Coding", Font.BOLD, 15));
+        lblPhone.setBounds(41, 188, 79, 32);
+        contentPane.add(lblPhone);
+        
+        lblEmail = new JLabel("이 메 일:");
+        lblEmail.setFont(new Font("D2Coding", Font.BOLD, 15));
+        lblEmail.setBounds(41, 249, 79, 32);
+        contentPane.add(lblEmail);
+        
+        textAccount = new JTextField();
+        textAccount.setFont(new Font("D2Coding", Font.PLAIN, 14));
+        textAccount.setBounds(132, 78, 204, 26);
+        contentPane.add(textAccount);
+        textAccount.setColumns(10);
+        
+        textPhone = new JTextField();
+        
+        textPhone.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                char c = e.getKeyChar();
+                
+                if (c == '0' || c == '1' || c == '2' || c == '3' || c == '4' || c == '5' || c == '6' || c == '7' || c == '8' || c == '9') {
+                    textPhone.setEditable(true);
+                    lblPhoneWarning.setText("");
+                } else {
+                    textPhone.setEditable(false);
+                    textPhone.setBackground(Color.WHITE);
+                    lblPhoneWarning.setText("* 전화번호는 숫자만 입력 가능합니다.");
+                }
+                
+            }
+        });
+        
+        textPhone.setFont(new Font("D2Coding", Font.PLAIN, 14));
+        textPhone.setColumns(10);
+        textPhone.setBounds(132, 189, 204, 26);
+        contentPane.add(textPhone);
+        
+        textField_2 = new JTextField();
+        textField_2.setFont(new Font("D2Coding", Font.PLAIN, 14));
+        textField_2.setColumns(10);
+        textField_2.setBounds(132, 252, 204, 26);
+        contentPane.add(textField_2);
+        
+        btnCancel = new JButton("취소");
+        btnCancel.addActionListener((e) -> {
+            dispose();
+        });
+        btnCancel.setFont(new Font("D2Coding", Font.BOLD, 15));
+        btnCancel.setBounds(41, 330, 102, 59);
+        contentPane.add(btnCancel);
+        
+        JButton btnSignIn = new JButton("회원가입");
+        btnSignIn.addActionListener((e) -> {
+            // TODO: 회원가입
+            dao.sign
+        });
+        btnSignIn.setFont(new Font("D2Coding", Font.BOLD, 15));
+        btnSignIn.setBounds(234, 330, 102, 59);
+        contentPane.add(btnSignIn);
+        
+        passwordField = new JPasswordField();
+        passwordField.setBounds(132, 134, 204, 26);
+        contentPane.add(passwordField);
+        
+        lblPhoneWarning = new JLabel("");
+        lblPhoneWarning.setFont(new Font("D2Coding", Font.ITALIC, 10));
+        lblPhoneWarning.setBounds(132, 220, 204, 15);
+        contentPane.add(lblPhoneWarning);
+    }
+
+}

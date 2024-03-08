@@ -1,0 +1,9 @@
+package com.itwill.springboot2.web;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+@RequestMapping("/employee")
+public class EmployeeController {
+
+}

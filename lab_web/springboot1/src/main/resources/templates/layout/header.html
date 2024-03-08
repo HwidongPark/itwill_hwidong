@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <div th:fragment="myHeader" class="bg-dark fs-1">
+        <a href="/" class="text-decoration-none text-white">
+        아이티윌
+        </a>
+    </div>
+    
+    
+    <div th:fragment="navigation">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav fs-3">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">메뉴1</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                메뉴 2
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                메뉴 3
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" aria-disabled="true">
+                                메뉴 4
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>        
+    
+</html>

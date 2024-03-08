@@ -1,0 +1,66 @@
+package com.itwill.polyglot.view;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+
+public class MyInfoFrame extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private JPanel contentPane;
+    private JLabel lblTitle;
+    private JLabel lblAccount;
+
+    /**
+     * Launch the application.
+     */
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    MyInfoFrame frame = new MyInfoFrame();
+                    frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+    
+    public MyInfoFrame() {
+        initialize();
+    }
+    
+    /**
+     * Create the frame.
+     */
+    public void initialize() {
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setResizable(false);
+        setBounds(100, 100, 450, 450);
+        contentPane = new JPanel();
+        contentPane.setBackground(Color.WHITE);
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+        setContentPane(contentPane);
+        contentPane.setLayout(null);
+        
+        lblTitle = new JLabel("내 정보");
+        lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
+        lblTitle.setFont(new Font("D2Coding", Font.BOLD, 20));
+        lblTitle.setBounds(160, 23, 99, 37);
+        contentPane.add(lblTitle);
+        
+        lblAccount = new JLabel("아이디:");
+        lblAccount.setFont(new Font("D2Coding", Font.BOLD, 15));
+        lblAccount.setBounds(30, 83, 69, 25);
+        contentPane.add(lblAccount);
+    }
+
+}

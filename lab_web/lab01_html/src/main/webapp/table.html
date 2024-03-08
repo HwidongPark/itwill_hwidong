@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML Table</title>
+        <style>
+            /* 여기 안은 CSS */
+            /* head의 style안은 CSS라서 커멘트 만드는 방법도 다름  */
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                background-color: skyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="index.html">인덱스 페이지</a>
+        
+        <h1>테이블</h1>
+        
+        <table>
+            <caption>프론트엔드 시험 성적</caption>  <!-- 테이블 제목 -->
+            <thead> <!-- 테이블 헤더 -->
+                <tr>    <!-- 테이블 행(row) -->
+                    <th>번호</th> <!-- 테이블 셀 헤더. 예) 컬럼 이름, 행 이름 -->
+                    <th>HTML</th>
+                    <th>CSS</th>
+                    <th>JavaScript</th>
+                </tr>
+            </thead>
+            <tbody> <!-- 테이블 본체 -->
+                <tr>
+                    <td>1</td>  <!-- 테이블 셀. 데이터 -->
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>1</td>  <!-- 테이블 셀. 데이터 -->
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>1</td>  <!-- 테이블 셀. 데이터 -->
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>합계</th>
+                    <td>290</th>
+                    <td>260</th>
+                    <td>300</th>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <br/>
+            
+        <table>
+            <theader>
+                <tr>
+                    <th>이름</th>
+                    <th colspan="2">전화번호</th>
+                </tr>
+            </theader>
+            <tbody>
+                <tr>
+                    <td>홍길동</td>
+                    <td>010-1234-5678</td>
+                    <td>02-1234-5678</td>
+                </tr>
+                <tr>
+                    <td>아이티윌</td>
+                    <td>010*1234-5678</td>
+                    <td>02-0000-0000</td>
+                </tr>
+            </tbody>
+            
+        </table>
+        
+        <br/>
+        
+        <table>
+            <tbody>
+                <tr>
+                    <th>이름</th>
+                    <td>홍길동</td>
+                    <td>아이티윌</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">전화번호</th>
+                    <td>010-1234-5678</td>
+                    <td>010-0000-0000</td>
+                </tr>
+                <tr>
+                    <td>02-1234-5678</td>
+                    <td>02-0000-0000</td>
+                </tr>
+           </tbody>
+
+        </table>
+        
+    </body>
+</html>

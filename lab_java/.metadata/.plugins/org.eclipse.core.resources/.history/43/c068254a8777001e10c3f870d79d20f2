@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import com.itwill.polyglot.controller.PolyglotDao;
+import com.itwill.polyglot.model.Language;
+import com.itwill.polyglot.model.Note;
+import com.itwill.polyglot.model.Word;
+
+public class Test {
+    public static void main(String[] args) {
+
+        
+        PolyglotDao dao = PolyglotDao.getInstance();
+        
+        Language testLanguage = new Language("EN", "English");
+        Note testNote = new Note(11, "노트1", testLanguage);
+        
+        Word testWord = new Word(9, 11, "Bravo", "B", testNote);
+        int result = dao.updateDifficulty(testWord, "Very Hard");
+        System.out.println(result + "행이 업데이트 되었습니다.");
+        
+        
+        
+    }
+}

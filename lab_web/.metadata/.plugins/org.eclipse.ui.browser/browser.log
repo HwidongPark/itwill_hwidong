@@ -1,0 +1,58 @@
+
+11월 08, 2023 10:00:57.924 NEW SESSION
+11월 08, 2023 10:00:57.924 [15608:6636:1108/100057.922:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 10:08:07.861 [15608:6636:1108/100807.861:ERROR:sharing_service.cc(250)] Device un-registration failed with fatal error
+11월 08, 2023 10:08:14.212 [15608:6636:1108/100814.212:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 11:05:26.987 [15608:6636:1108/110526.987:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+11월 08, 2023 11:05:47.634 [15608:6636:1108/110547.634:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+11월 08, 2023 11:05:47.635 [15608:6636:1108/110547.635:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+11월 08, 2023 11:05:47.736 [15608:6636:1108/110547.735:ERROR:CONSOLE(1)] "Could not close stream.", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+11월 08, 2023 11:06:00.326 [15608:6636:1108/110600.326:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+11월 08, 2023 11:07:00.230 [15608:6636:1108/110700.230:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+11월 08, 2023 11:07:00.231 [15608:6636:1108/110700.230:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+11월 08, 2023 11:48:58.700 [15608:6636:1108/114858.700:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 13:39:30.00 [15608:5124:1108/133929.999:ERROR:cert_verify_proc_builtin.cc(696)] CertVerifyProcBuiltin for cine21.com failed:
+11월 08, 2023 13:39:30.01 ----- Certificate i=0 (CN=*.cine21.com) -----
+11월 08, 2023 13:39:30.01 ERROR: Time is after notAfter
+11월 08, 2023 13:39:30.02 
+11월 08, 2023 13:39:30.03 
+11월 08, 2023 13:51:07.536 [15608:6636:1108/135107.536:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 14:11:18.800 [15608:6636:1108/141118.799:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 14:11:18.800 [15608:6636:1108/141118.799:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 14:43:33.962 [15608:6636:1108/144333.962:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 14:47:05.238 [15608:6636:1108/144705.238:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 14:51:40.661 [15608:6636:1108/145140.661:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 15:03:14.209 [15608:6636:1108/150314.208:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 15:03:14.209 [15608:6636:1108/150314.209:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 15:12:34.186 [15608:6636:1108/151234.186:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 15:46:36.159 [15608:6636:1108/154636.159:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 15:55:45.667 [15608:6636:1108/155545.667:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 15:57:17.555 [15608:6636:1108/155717.554:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 16:09:28.892 [15608:6636:1108/160928.892:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 08, 2023 16:25:37.38 [15608:6636:1108/162537.037:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+11월 22, 2023 09:51:10.564 NEW SESSION
+11월 22, 2023 09:51:10.564 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 22, 2023 09:53:55.506 [308:3032:1122/095355.506:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 09:54:21.903 [308:3032:1122/095421.902:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 10:02:23.758 [308:3032:1122/100223.758:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 13:23:05.751 [308:3032:1122/132305.750:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 13:46:32.679 [308:3032:1122/134632.679:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 13:46:32.680 [308:3032:1122/134632.679:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 15:39:59.405 [308:3032:1122/153959.405:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 15:44:42.810 [308:3032:1122/154442.809:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 15:49:58.918 [308:3032:1122/154958.918:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 15:50:19.215 [308:3032:1122/155019.214:ERROR:device_event_log_impl.cc(192)] [15:50:19.214] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+11월 22, 2023 16:01:47.171 [308:3032:1122/160147.170:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 16:34:48.817 [308:3032:1122/163448.817:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 16:39:20.872 [308:3032:1122/163920.872:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 17:05:10.178 [308:3032:1122/170510.177:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 17:13:34.886 [308:3032:1122/171334.886:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 17:40:30.217 [308:3032:1122/174030.216:ERROR:gpu_disk_cache.cc(216)] Failed to create blob cache entry: -2
+11월 22, 2023 17:40:30.217 [308:3032:1122/174030.216:ERROR:gpu_disk_cache.cc(216)] Failed to create blob cache entry: -2
+11월 22, 2023 17:40:30.448 [308:3032:1122/174030.448:ERROR:gpu_disk_cache.cc(216)] Failed to create blob cache entry: -2
+11월 22, 2023 17:40:30.449 [308:3032:1122/174030.448:ERROR:gpu_disk_cache.cc(216)] Failed to create blob cache entry: -2
+11월 22, 2023 17:49:57.589 [308:3032:1122/174957.589:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 17:49:57.590 [308:3032:1122/174957.589:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 22, 2023 17:50:02.326 [308:3032:1122/175002.326:ERROR:device_event_log_impl.cc(192)] [17:50:02.322] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+11월 22, 2023 18:18:25.277 [308:3032:1122/181825.277:ERROR:sharing_service.cc(250)] Device un-registration failed with fatal error

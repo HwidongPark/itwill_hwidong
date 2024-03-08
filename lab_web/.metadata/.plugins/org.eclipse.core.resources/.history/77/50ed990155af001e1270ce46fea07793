@@ -1,0 +1,11 @@
+package com.itwill.springboot1.domain;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Data
+@Entity
+@Table(name = "QUESTION2")
+public class Question2 {
+
+}

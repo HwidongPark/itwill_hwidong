@@ -1,0 +1,175 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Hwi Dong Park</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		
+		<style>
+            body {
+                background-color: oldlace;
+            }
+            
+            
+            img {
+                width: 200%;
+                height: auto;
+                display:block;
+                margin-top: 25%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            div.align-items-start {
+                border: 2px lightgray solid;
+            }
+            
+            hr {
+                border-top: 15px gray dotted;
+                margin-left:45%;
+                margin-right:45%;
+            }
+            
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50;
+            }
+            
+            .center-text {
+                text-align: center;
+            }
+            
+            #container {
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                width: 100vw;
+                height: 80%;
+            }
+            
+            #pills-tabContent {
+                border: 2px solid dimgray;
+                border-radius: 5%;
+                
+                height: 100%;
+                
+            }
+            
+            footer {
+                text-align: center;
+                margin-top: 3%;
+                max-width: 100%;
+            }
+            
+
+        </style>
+		
+	</head>
+	<body>
+		<h1>박휘동</h1>
+        
+        
+        <!-- horizontal-->
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+          </li>
+
+        </ul>
+        <div id="container">
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+              <section class="center-text">
+                  <strong>생년월일</strong> <br>
+                  1994년 8월 5일<br><br>
+                  <hr><br>
+                  <strong>나이</strong> <br>
+                  30<br><br>
+                  <hr> <br>
+                  <strong>좋아하는 음식</strong> <br>
+                  해산물 빼고 다<br><br>
+                  
+                  <strong>싫어하는 음식</strong> <br>
+                  해산물<br><br>
+                  <hr> <br>
+                  <strong>좋아하는 동물</strong> <br>
+                  판다, 고양이, 강아지 <br><br>
+                  
+                  <strong>싫어하는 동물</strong> <br>
+                  새(특히 비둘기)<br><br>
+                  
+                  <strong>이거 왜이렇게 어렵지?</strong> 
+                </section>
+              </div>
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                  <article class="center-text">
+                      <strong>초등학교</strong><br>
+                      5여개의 초등학교. 1년에 한번꼴로 전학다님 <br><br>
+                      
+                      <hr>
+                      
+                      <strong>중학교</strong><br>
+                      상암중학교 <br><br>
+                      
+                      <hr>
+                      
+                      <strong>고등학교</strong><br>
+                      상암 고등학교 <br><br>
+                      
+                      <hr>
+                      
+                      <strong>대학교</strong><br>
+                      한국항공대학교 항공운항학과 <br>
+                      <em>학점: 4.06 / 4.5</em> <br><br>
+                      
+                      <hr>
+                      
+                      <strong>진학 예정 대학원(비자 안 나옴ㅠㅠ)</strong><br><br>
+                      Stony Brook University, State University of New York 데이터사이언스 석사 <br>
+                      
+                      <hr>
+                      
+                      <strong>어학</strong><br>
+                      Duolingo: 135점(iBT TOEFL환산 104-108)<br> TOEIC: 945점<br><br>
+                      
+                      <hr>
+                      
+                      <strong>Skills(희망)</strong><br>
+                      Java, Python, SQL, HTML, CSS, JavaScript, JSP, Spring
+                  </article>
+              </div>
+              <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
+              <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div>
+            </div>
+            <section class="tab=content" style="border:none">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA4MjRfMiAg%2FMDAxNjkyODc4OTM5MTM1.OwuieWUfIWMoqjJuiVZvIhezkWMGXcqvI11O3XGaUGUg.XqAnGPRRTfnHRxbZbJNXTclmJoOxwqLEVnY6okEVhQMg.PNG.sorimusician%2FIMG_9508.PNG&type=sc960_832", alt="푸바오 네이버" style="width: 200px; height: 200px;" />
+                <figure class="center-text">내 사진</figure>
+                
+            </section>
+        </div>
+        
+        <footer>
+            <strong>Contact</strong> <br>
+            <b>Phone</b>: <span>010-9084-1760</span>       
+            <a href="https://www.facebook.com"; style="margin-left: 2%;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                </svg>
+            </a>
+            <a href="http://www.instaram.com" style="margin-left: 2%;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                </svg>
+            </a>
+        </footer>
+        
+        		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        
+	</body>
+</html>

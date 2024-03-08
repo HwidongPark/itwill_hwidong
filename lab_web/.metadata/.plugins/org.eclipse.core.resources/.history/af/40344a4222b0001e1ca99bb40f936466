@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Insert title here</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		
+	</head>
+	<body>
+        <h1>부서 상세보기</h1>		
+		<h3 th:text="${department.departName}"></h3>
+        <h5 th:text="${department.deptNo}"></h5>
+        <h5 th:text="${department.location}"></h5>
+        <div th:text="${employees}"></div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>직원 번호</th>
+                    <th>이름</th>
+                    <th>업무</th>                    
+                    <th>매니저</th>                    
+                    <th>채용일</th>                    
+                    <th>연봉</th>                    
+                    <th>커미션</th>                    
+                    <th>부서 이름</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="employee : ${employees}" th:object="${employee}">
+                    <td th="*{id}"></td>
+                    <td th="*{employee.ename"></td>
+                    <td th="*{job}"></td>
+                    <td th="*{manager}"></td>
+                    <td th="*{hiredate}"></td>
+                    <td th="*{salary}"></td>
+                    <td th="*{commission}"></td>
+                    <td th="*{department.departName}"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+		
+	</body>
+</html>

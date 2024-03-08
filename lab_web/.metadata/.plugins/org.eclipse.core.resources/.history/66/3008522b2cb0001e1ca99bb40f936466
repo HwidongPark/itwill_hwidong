@@ -1,0 +1,27 @@
+package com.itwill.springboot2.domain;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "LOCATIONS")
+public class Location2 {
+    
+    @Id
+    private Integer locationId;
+    
+    private String streetAddress;
+    
+    private String postalCode;
+    
+    private String city;
+    
+    private String stateProvince;
+    
+    private String countryId;
+    
+    
+}

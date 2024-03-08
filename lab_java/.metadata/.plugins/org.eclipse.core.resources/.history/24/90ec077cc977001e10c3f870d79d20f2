@@ -1,0 +1,64 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JTabbedPane;
+import java.awt.BorderLayout;
+import javax.swing.JTextArea;
+import javax.swing.JTable;
+import javax.swing.JList;
+
+public class TestWindow {
+
+    private JFrame frame;
+    private JTable table;
+    private JList list;
+
+    /**
+     * Launch the application.
+     */
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    TestWindow window = new TestWindow();
+                    window.frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    /**
+     * Create the application.
+     */
+    public TestWindow() {
+        initialize();
+    }
+
+    /**
+     * Initialize the contents of the frame.
+     */
+    private void initialize() {
+        frame = new JFrame();
+        frame.setBounds(100, 100, 450, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().setLayout(null);
+        
+        JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+        tabbedPane.setBounds(149, 99, 285, 162);
+        frame.getContentPane().add(tabbedPane);
+        
+        table = new JTable();
+        tabbedPane.addTab("New tab", null, table, null);
+        
+        list = new JList();
+        tabbedPane.addTab("New tab", null, list, null);
+        
+        JList list_1 = new JList();
+        list_1.setBounds(70, 70, 1, 1);
+        frame.getContentPane().add(list_1);
+        
+        
+    }
+}
